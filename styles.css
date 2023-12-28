@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --color-grey: #eee;
+  --color-dark-grey: #222831;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-blue);
+    height: 100vh;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.header {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 3rem;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.header h1 span {
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form {
+    padding-bottom: 1rem;
+}
+
+.btn {
+    border: 1px solid #fff;
+    padding: 8px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    transition: background-color 0.3s ease-out;
+}
+
+.btn:hover {
+    background-color: var(--color-sec);
+}
+
+.modal {
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.modal-content {
+    position: relative;
+    width: 80%;
+    max-width: 60rem;
+    background-color: #eeee;
+    margin: 15% auto;
+    padding: 2rem;
+    border: 1px solid #eee;
+    text-align: center;
+    animation: slide-down ease .8s;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-30rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+hr {
+    height: 2px;
+    background-color: #050505;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    top: 0.6rem;
+}
+
+.modal-content h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.slide-up {
+    animation: slide-up ease .8s;
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50rem);
+    }
+}

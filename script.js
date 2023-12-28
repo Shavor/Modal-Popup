@@ -1,0 +1,25 @@
+const modal = document.querySelector('.modal'),
+       modalContent = document.querySelector('.modal-content'),
+        btn = document.querySelector('.btn'),
+        close = document.querySelector('.close');
+
+btn.addEventListener('click', openModal);
+close.addEventListener('click', closeModal);
+modal.addEventListener('click', closeModal);
+
+// OPEN MODAL
+function openModal (e) {
+    e.preventDefault();
+    modal.style.display = 'block';
+}
+
+// CLOSE MODAL
+function closeModal (e) {
+    modalContent.classList.add('slide-up');
+    setTimeout(() => {
+        modalContent.classList.remove('slide-up');
+        modal.style.display = 'none';
+    }, 500)
+
+    
+}
